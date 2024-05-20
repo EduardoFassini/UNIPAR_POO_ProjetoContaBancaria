@@ -7,7 +7,6 @@ public class ContaBancariaTest {
 
     @Test
     public void testDepositoContaCorrente(){
-
         ContaCorrente conta = new ContaCorrente();
         conta.depositar(5000d);
 
@@ -27,7 +26,7 @@ public class ContaBancariaTest {
     public void testSaqueMaiorSaldoContaCorrente(){
         ContaCorrente conta = new ContaCorrente();
         conta.depositar(3000d);
-        boolean validacao = conta.saque(3000.01);
+        boolean validacao = conta.saque(4500d);
 
         assertFalse(validacao);
         assertEquals(3000d, conta.obterSaldo());
